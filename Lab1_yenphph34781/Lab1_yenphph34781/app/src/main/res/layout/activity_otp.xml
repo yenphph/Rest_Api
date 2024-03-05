@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#000000"
+    tools:context=".OTP">
+
+    <EditText
+        android:id="@+id/mobileET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Nhập số điện thoại"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:padding="12dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#CCCCCC"
+        android:backgroundTint="#FF4081" />
+
+    <Button
+        android:id="@+id/actionDT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Gửi Số Điện Thoại"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FF4081" />
+
+    <EditText
+        android:id="@+id/otpET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Nhập OTP"
+        android:inputType="number"
+        android:maxLines="1"
+        android:padding="12dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#CCCCCC"
+        android:backgroundTint="#FF4081" />
+
+
+    <Button
+        android:id="@+id/actionOTP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gửi OTP"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FF4081" />
+   <TextView
+       android:id="@+id/backotp"
+       android:layout_width="wrap_content"
+       android:textColor="@color/white"
+       android:layout_height="wrap_content"
+       android:text="Quay lại"/>
+</LinearLayout>
