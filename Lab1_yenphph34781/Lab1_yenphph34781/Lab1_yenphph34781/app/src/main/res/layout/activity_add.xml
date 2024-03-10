@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    tools:context=".Add">
+
+    <EditText
+        android:id="@+id/cityNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="City Name"
+        android:layout_margin="16dp"
+        android:background="#ffffff"/>
+
+    <EditText
+        android:id="@+id/stateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="State"
+        android:layout_below="@id/cityNameEditText"
+        android:layout_margin="16dp"
+        android:background="#ffffff"/>
+
+    <EditText
+        android:id="@+id/countryEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Country"
+        android:layout_below="@id/stateEditText"
+        android:layout_margin="16dp"
+        android:background="#ffffff"/>
+
+    <EditText
+        android:id="@+id/populationEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Population"
+        android:layout_below="@id/countryEditText"
+        android:layout_margin="16dp"
+        android:inputType="number"
+        android:background="#ffffff"/>
+
+    <Button
+        android:id="@+id/addCityButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add City"
+        android:layout_below="@id/populationEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:background="#4285F4"
+        android:textColor="#ffffff"/>
+
+</RelativeLayout>
