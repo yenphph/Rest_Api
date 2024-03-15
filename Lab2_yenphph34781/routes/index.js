@@ -3,7 +3,8 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  //server xu ly du lieu va day data ve view
+  res.render('index', { title: 'Express', title1: 'HTML' });
 });
 
 module.exports = router;
