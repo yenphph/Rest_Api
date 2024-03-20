@@ -143,6 +143,43 @@ const FruitsController = {
                 "data": []
             });
         }
-    }
+    },
+     addFruitWithFileImage : async (req, res) => {
+        try {
+            const data = req.body;
+            const files = req.files; // Đổi req thành req.files để lấy danh sách các files đã upload
+    
+            const urlsImage = files.map((file) => `${req.protocol}://${req.get("host")}/uploads/${file.filename}`);
+    
+            const newFruit = new Fruits({
+                name: data.name,
+                quantity: data.quantity,
+                price: data.price,
+                status: data.status,
+                image: urlsImage,
+                description: data.description,
+                id_distributor: data.id_distributor
+            });
+    
+            const result = await newFruit.save();
+    
+            if (result) {
+                return res.json({
+                    status: 200,
+                    messenger: "Thêm thành công",
+                    data: result
+                });
+            } else {
+                return res.json({
+                    status: 400,
+                    messenger: "Lỗi, thêm không thành công",
+                    data: []
+                });
+            }
+        } catch (error) {
+            return res.status(500).json({ error: error.message });
+        }
+     }
+    
 }
 module.exports = FruitsController

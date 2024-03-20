@@ -1,6 +1,6 @@
 const truitsController = require('../Controller/Fruits');
+const upload = require('../config/common/upload');
 const router = require('express').Router();
-
 // add
 router.post("/", truitsController.addFruits);
 //lấy hêt danh sach
@@ -13,4 +13,6 @@ router.get("/getGiaSX", truitsController. getGiaSX);
 router.get("/getQueryhai", truitsController.getQueryhai);
 //update
 router.put("/:id", truitsController.update);
+//ảnh
+router.post('/add-fruit-with-file-image', upload.array('image', 5), (req, res) => truitsController.addFruitWithFileImage(req, res));
 module.exports = router;

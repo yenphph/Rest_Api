@@ -10,6 +10,9 @@ const FruitSchema = new mongoose.Schema({
     price: {
         type: Number,
     },
+    image: {
+        type: Array,
+    },
     status: {
         type: String
     },

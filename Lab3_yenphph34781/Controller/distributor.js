@@ -21,6 +21,18 @@ const distributes = {
         } catch (error) {
             res.status(500).json(error);
         }
+    },
+    getDistributors : async (req, res) => {
+        try {
+            const data = await distributor.find();
+            res.json({
+                "status": 200,
+                "messenger": "Danh sach fruit",
+                "data": data
+            })
+        } catch (error) {
+            console.log(error);
+        }
     }
 }
 module.exports = distributes
