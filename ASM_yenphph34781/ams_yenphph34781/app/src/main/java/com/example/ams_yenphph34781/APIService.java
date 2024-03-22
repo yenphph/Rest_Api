@@ -19,8 +19,8 @@ public interface APIService {
     @POST("api/clothes/")
     Call<Void> addClothes(@Body Clothes newItem);
 
-    @DELETE("api/clothes/{id}") // Sửa lại đường dẫn để chấp nhận tham số là chuỗi
-    Call<Void> deleteClothes(@Path("id") String id); // Sửa kiểu dữ liệu của tham số ID thành String
-    @PUT("api/clothes/{id}") // Phương thức cập nhật
+    @DELETE("api/clothes/{id}")
+    Call<Void> deleteClothes(@Path("id") String id);
+    @PUT("api/clothes/{id}")
     Call<Void> updateClothes(@Path("id") String id, @Body Clothes updatedItem);
 }

@@ -10,12 +10,23 @@
               <deviceKey>
                 <Key>
                   <type value="VIRTUAL_DEVICE_PATH" />
-                  <value value="C:\Users\ASUS\.android\avd\Pixel_5_API_33.avd" />
+                  <value value="C:\Users\ASUS\.android\avd\Pixel_6_Pro_API_33.avd" />
                 </Key>
               </deviceKey>
             </Target>
           </runningDeviceTargetSelectedWithDropDown>
-          <timeTargetWasSelectedWithDropDown value="2024-03-22T00:30:48.949537900Z" />
+          <targetSelectedWithDropDown>
+            <Target>
+              <type value="QUICK_BOOT_TARGET" />
+              <deviceKey>
+                <Key>
+                  <type value="VIRTUAL_DEVICE_PATH" />
+                  <value value="C:\Users\ASUS\.android\avd\Pixel_6_Pro_API_33.avd" />
+                </Key>
+              </deviceKey>
+            </Target>
+          </targetSelectedWithDropDown>
+          <timeTargetWasSelectedWithDropDown value="2024-03-22T07:47:09.764503Z" />
         </State>
       </entry>
     </value>

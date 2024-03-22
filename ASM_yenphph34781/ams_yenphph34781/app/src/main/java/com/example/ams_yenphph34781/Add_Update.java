@@ -32,15 +32,16 @@ public class Add_Update extends AppCompatActivity {
     private APIService apiService;
     private Adapter adapter;
     Clothes newItem;
+   List<Clothes> itemList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_update);
-        typeEditText = findViewById(R.id.typeEditText);
-        nameEditText = findViewById(R.id.nameEditText);
-        priceEditText = findViewById(R.id.priceEditText);
-        saveButton = findViewById(R.id.saveButton);
-        cancelButton = findViewById(R.id.cancelButton);
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_add_update);
+            typeEditText = findViewById(R.id.typeEditText);
+            nameEditText = findViewById(R.id.nameEditText);
+            priceEditText = findViewById(R.id.priceEditText);
+            saveButton = findViewById(R.id.saveButton);
+            cancelButton = findViewById(R.id.cancelButton);
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(DOMAIN)
@@ -56,42 +57,47 @@ public class Add_Update extends AppCompatActivity {
             priceEditText.setText(String.valueOf(clothesToUpdate.getPrice()));
         }
         adapter = new Adapter(new ArrayList<>(), this, apiService);
+        itemList = new ArrayList<>();
+            saveButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String type = typeEditText.getText().toString();
+                    String name = nameEditText.getText().toString();
+                    double price = Double.parseDouble(priceEditText.getText().toString());
 
-        saveButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String type = typeEditText.getText().toString();
-                String name = nameEditText.getText().toString();
-                double price = Double.parseDouble(priceEditText.getText().toString());
-
-                if (clothesToUpdate != null) {
-                    clothesToUpdate.setType(type);
-                    clothesToUpdate.setName(name);
-                    clothesToUpdate.setPrice(price);
-
-                    updateItemOnServer(clothesToUpdate);
-                } else {
-                    addItemToServer(type, name, price);
+                    if (clothesToUpdate != null) {
+                        clothesToUpdate.setType(type);
+                        clothesToUpdate.setName(name);
+                        clothesToUpdate.setPrice(price);
+                        updateItemOnServer(clothesToUpdate);
+                    } else {
+                        addItemToServer(type, name, price);
+                    }
                 }
-            }
-        });
+            });
 
-        cancelButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+            cancelButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finish();
+                }
+            });
     }
 
     private void updateItemOnServer(Clothes clothes) {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(DOMAIN)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        apiService = retrofit.create(APIService.class);
         Call<Void> call = apiService.updateClothes(clothes.get_id(), clothes);
         call.enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
                 if (response.isSuccessful()) {
+                    loadDataFromMongoDB();
                     Toast.makeText(Add_Update.this, "Item updated successfully", Toast.LENGTH_SHORT).show();
-                    loadDataFromMongoDB(); // Load lại dữ liệu sau khi cập nhật thành công
+                    loadDataFromMongoDB(); //bị lôi đoạn này
                 } else {
                     Log.e("updateItemOnServer", "Unsuccessful response: " + response.code());
                     Toast.makeText(Add_Update.this, "Failed to update item", Toast.LENGTH_SHORT).show();
@@ -107,15 +113,22 @@ public class Add_Update extends AppCompatActivity {
     }
 
     private void loadDataFromMongoDB() {
-        // Gửi yêu cầu để load lại danh sách từ MongoDB
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(DOMAIN)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        apiService = retrofit.create(APIService.class);
         Call<List<Clothes>> call = apiService.getClothes();
         call.enqueue(new Callback<List<Clothes>>() {
             @Override
             public void onResponse(Call<List<Clothes>> call, Response<List<Clothes>> response) {
                 if(response.isSuccessful()){
                     List<Clothes> newData = response.body();
-                    adapter.refreshData(newData);
-                    adapter.notifyDataSetChanged();// liệu mới vào adapter
+//                    adapter.refreshData(newData);
+                    itemList.clear();//sai
+                    itemList.addAll(newData);
+//                    adapter.updateData(newData);
+                    adapter.notifyDataSetChanged();// chỗ này bị
                 }
             }
 
@@ -133,7 +146,7 @@ public class Add_Update extends AppCompatActivity {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
                 if (response.isSuccessful()) {
-                    loadDataFromMongoDB(); // Load lại danh sách từ MongoDB sau khi thêm mới thành công
+                    loadDataFromMongoDB();
                     Toast.makeText(Add_Update.this, "Item added successfully", Toast.LENGTH_SHORT).show();
                     finish();
                 } else {
@@ -150,4 +163,5 @@ public class Add_Update extends AppCompatActivity {
             }
         });
     }
+
 }

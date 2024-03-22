@@ -54,16 +54,15 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ItemViewHolder>{
         });
     }
 
-    private void loadDataFromMongoDB() {
-        // Gửi yêu cầu để load lại danh sách từ MongoDB
+    void loadDataFromMongoDB() {
         Call<List<Clothes>> call = apiService.getClothes();
         call.enqueue(new Callback<List<Clothes>>() {
             @Override
             public void onResponse(Call<List<Clothes>> call, Response<List<Clothes>> response) {
                 if(response.isSuccessful()){
                     List<Clothes> newData = response.body();
-                    updateData(newData); // Cập nhật dữ liệu mới vào adapter
-                    notifyDataSetChanged(); // Thông báo cho RecyclerView biết dữ liệu đã thay đổi
+                    updateData(newData);
+                    notifyDataSetChanged();
                 }
             }
 
@@ -130,5 +129,24 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ItemViewHolder>{
             priceTextView = itemView.findViewById(R.id.priceTextView);
             deleteTextView = itemView.findViewById(R.id.deleteTextView);
         }
+    }
+    public void  getDATA(  List<Clothes> newData){
+        Call<List<Clothes>> call = apiService.getClothes();
+        call.enqueue(new Callback<List<Clothes>>() {
+            @Override
+            public void onResponse(Call<List<Clothes>> call, Response<List<Clothes>> response) {
+                if(response.isSuccessful()){
+                    itemList.clear();
+                    itemList.addAll(newData);
+                    notifyDataSetChanged();
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Clothes>> call, Throwable t) {
+                Log.e("Main", t.getMessage());
+            }
+        });
     }
 }

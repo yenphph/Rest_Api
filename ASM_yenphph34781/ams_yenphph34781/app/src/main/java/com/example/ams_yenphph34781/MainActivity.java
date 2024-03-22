@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
         apiService = retrofit.create(APIService.class);
 
-        // Khởi tạo danh sách trống ban đầu
+
         itemList = new ArrayList<>();
         adapter = new Adapter(itemList, getApplicationContext(), apiService); // Truyền ApiService vào Adapter
         recyclerView.setAdapter(adapter);
@@ -72,9 +72,12 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<List<Clothes>> call, Response<List<Clothes>> response) {
                 if(response.isSuccessful()){
                     List<Clothes> newData = response.body();
-                    itemList.clear(); // Xóa dữ liệu cũ trong danh sách
-                    itemList.addAll(newData); // Thêm dữ liệu mới vào danh sách
-                    adapter.notifyDataSetChanged(); // Thông báo cho Adapter rằng dữ liệu đã thay đổi
+//                    itemList.clear(); //Method
+//                    itemList.addAll(newData);
+                   adapter.updateData(newData);
+//                    adapter.notifyDataSetChanged();
+
+
                 }
             }
 
