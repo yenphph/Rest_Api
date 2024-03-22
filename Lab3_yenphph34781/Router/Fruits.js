@@ -13,6 +13,8 @@ router.get("/getGiaSX", truitsController. getGiaSX);
 router.get("/getQueryhai", truitsController.getQueryhai);
 //update
 router.put("/:id", truitsController.update);
+//delete
+router.delete("/:id", truitsController.deleteTruits);
 //ảnh
 router.post('/add-fruit-with-file-image', upload.array('image', 5), (req, res) => truitsController.addFruitWithFileImage(req, res));
 module.exports = router;

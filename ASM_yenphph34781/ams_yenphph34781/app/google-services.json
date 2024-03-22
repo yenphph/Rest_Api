@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "738978566612",
+    "project_id": "yenphph34781asm",
+    "storage_bucket": "yenphph34781asm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738978566612:android:b16b01e24dadc8b7f08641",
+        "android_client_info": {
+          "package_name": "com.example.ams_yenphph34781"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDa-xbPB9cbzcD1vGgJ_tG2GfxcfG7s9iE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

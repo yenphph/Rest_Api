@@ -79,10 +79,10 @@ const FruitsController = {
             const query2 = {
                 name: { $regex: '^P', $options: 'i' } // Tìm kiếm tất cả các mục có chữ cái bắt đầu là 'P' (không phân biệt chữ hoa, chữ thường)
             };
-    
+
             const dataS = await Fruits.find(query2, 'name quantity price id_distributor')
                 .populate('id_distributor');
-    
+
             res.json({
                 "status": 200,
                 "message": "Danh sách fruit",
@@ -93,15 +93,8 @@ const FruitsController = {
             res.status(500).json(error);
         }
     },
-    
+
     update: async (req, res) => {
-        // try {
-        //     const data = await Fruits.findById(req.params.id);
-        //     await data.updateOne({ $set: req.body });
-        //     res.status(200).json("Updated successfully!");
-        // } catch (err) {
-        //     res.status(500).json(err);
-        // }
         try {
             const { id } = req.params;
             const data = req.body;
@@ -144,13 +137,13 @@ const FruitsController = {
             });
         }
     },
-     addFruitWithFileImage : async (req, res) => {
+    addFruitWithFileImage: async (req, res) => {
         try {
             const data = req.body;
             const files = req.files; // Đổi req thành req.files để lấy danh sách các files đã upload
-    
+
             const urlsImage = files.map((file) => `${req.protocol}://${req.get("host")}/uploads/${file.filename}`);
-    
+
             const newFruit = new Fruits({
                 name: data.name,
                 quantity: data.quantity,
@@ -160,9 +153,9 @@ const FruitsController = {
                 description: data.description,
                 id_distributor: data.id_distributor
             });
-    
+
             const result = await newFruit.save();
-    
+
             if (result) {
                 return res.json({
                     status: 200,
@@ -179,7 +172,31 @@ const FruitsController = {
         } catch (error) {
             return res.status(500).json({ error: error.message });
         }
-     }
-    
+    },
+    deleteTruits: async (req, res) => {
+        try {
+            const { id } = req.params;
+            // Tìm đối tượng Fruits cần cập nhật
+            const delFruit = await Fruits.findByIdAndDelete(id);
+
+            if (delFruit) {
+                res.json({
+                    "status": 200,
+                    "message": "Xoá thành công",
+                    "data": delFruit
+                });
+            } else {
+                res.json({
+                    "status": 400,
+                    "message": "Lỗi, Xóa không thành công",
+                    "data": []
+                });
+            }
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
 }
+
 module.exports = FruitsController
