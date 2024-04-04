@@ -53,4 +53,6 @@ router.put('/clothes/:id', async function (req, res, next) {
     } catch (error) {
         res.status(500).json(error);
     }
+    // =======
+    
 })

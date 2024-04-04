@@ -1,0 +1,19 @@
+<!-- dialog_add_name.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/edTextNameU"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/custom_editext"
+        android:hint="Enter Name"
+        android:padding="10dp" />
+
+
+
+</LinearLayout>
