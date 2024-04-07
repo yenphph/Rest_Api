@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?><!-- dialog_update_car.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="name"
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="14sp" />
+    <EditText
+        android:id="@+id/et_nameU"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+         android:hint="name distributor"
+        android:padding="10dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/et_priceU"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+         android:hint="Price"
+        android:inputType="numberDecimal"
+        android:padding="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/et_descriptionU"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+         android:hint="Description"
+        android:padding="10dp" />
+
+    <ImageView
+        android:id="@+id/imageU"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+         android:scaleType="centerCrop"
+        android:padding="10dp"
+        android:contentDescription="Image" />
+    <Button
+        android:id="@+id/btn_submitU"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:padding="10dp" />
+
+
+
+</LinearLayout>
