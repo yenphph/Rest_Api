@@ -26,101 +26,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf267fff-a519-4b5c-9f24-1040e2c96085" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/app/src/main/java/com/example/android_lab5_yenphph34781/adapter/FruitAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/app/src/main/java/com/example/android_lab5_yenphph34781/model/Fruit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/app/src/main/java/com/example/android_lab5_yenphph34781/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/app/src/main/java/com/example/android_lab5_yenphph34781/view/HomeActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/app/src/main/java/com/example/android_lab5_yenphph34781/view/LoginActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/app/src/main/java/com/example/android_lab5_yenphph34781/view/RegisterActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/app/src/main/res/drawable/baseline_broken_image_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/app/src/main/res/drawable/edit_icon.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/app/src/main/res/drawable/ic_add.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/app/src/main/res/layout/activity_home.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/app/src/main/res/layout/activity_login.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/app/src/main/res/layout/activity_register.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/app/src/main/res/layout/item_fruit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/example/lab8_yenphph34781/ExampleInstrumentedTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lab8_yenphph34781/Adapter/Adapter_Item_District_Select_GHN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lab8_yenphph34781/Adapter/Adapter_Item_Province_Select_GHN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lab8_yenphph34781/Adapter/Adapter_Item_Ward_Select_GHN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lab8_yenphph34781/Adapter/product_Adapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lab8_yenphph34781/LocationActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lab8_yenphph34781/MainActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lab8_yenphph34781/Models/District.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lab8_yenphph34781/Models/DistrictRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lab8_yenphph34781/Models/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lab8_yenphph34781/Models/Province.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lab8_yenphph34781/Models/ResponseGHN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lab8_yenphph34781/Models/Ward.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lab8_yenphph34781/Serives/GHNRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lab8_yenphph34781/Serives/GHNServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/apple.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bana.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/buy_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/evaluate_style.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/favorite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/grapes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/oranges.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/slide1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/star.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/style_name_product.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/style_product.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/style_spinner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_location.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_district_spinner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_product.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_province_spinner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_ward_spinner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/example/lab8_yenphph34781/ExampleUnitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASM_yenphph34781/ams_yenphph34781/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ASM_yenphph34781/ams_yenphph34781/.idea/deploymentTargetDropDown.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3_yenphph34781.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/.idea/deploymentTargetDropDown.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/app/src/main/java/com/example/android_lab5_yenphph34781/model/Distributor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/app/src/main/java/com/example/android_lab5_yenphph34781/model/Distributor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/app/src/main/java/com/example/android_lab5_yenphph34781/model/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/app/src/main/java/com/example/android_lab5_yenphph34781/model/Response.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/app/src/main/java/com/example/android_lab5_yenphph34781/services/ApiServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5_yenphph34781/Android_Lab5_yenphph34781/app/src/main/java/com/example/android_lab5_yenphph34781/services/ApiServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5_yenphph34781/Api_Lab5/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5_yenphph34781/Api_Lab5/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5_yenphph34781/Api_Lab5/config/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5_yenphph34781/Api_Lab5/config/db.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5_yenphph34781/Api_Lab5/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5_yenphph34781/Api_Lab5/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5_yenphph34781/Api_Lab5/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5_yenphph34781/Api_Lab5/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5_yenphph34781/Api_Lab5/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5_yenphph34781/Api_Lab5/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5_yenphph34781/Api_Lab5/routes/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5_yenphph34781/Api_Lab5/routes/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoASM1.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoBT7.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoLab1.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoLab3.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoLab4.mp4" beforeDir="false" />
-    </list>
+    <list default="true" id="cf267fff-a519-4b5c-9f24-1040e2c96085" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -164,7 +70,7 @@
     "RunOnceActivity.cidr.known.project.marker": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "B:/REST_API/Rest_Api/app",
+    "last_opened_file_path": "B:/REST_API/Rest_Api/asmRestApi/asm_yenphph34781_android",
     "settings.editor.selected.configurable": "AndroidSdkUpdater"
   }
 }]]></component>
